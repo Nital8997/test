@@ -11,10 +11,12 @@ import proimg4 from '../../assests/images/Home/productimg-4.jpg';
 import image from "../../assests/images/Home/earring-image1.jpg";
 import earring from "../../assests/images/Home/earringgold-1.jpg";
 import proimage3 from '../../assests/images/Home/productimg-5.jpg';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 
 
 function Section4() {
+  const navigate = useNavigate();
      const data = [
         { image:proimg1, proTitle:"Rhombus Diamond Ring 18k White Gold", price:"$999.00", button:"Select options" },
         { image:proimg2, proTitle:"Arced Custom Ring Design 20k Sterling Gold", price:"$599.00", button:"Select options "},
@@ -69,23 +71,24 @@ function Section4() {
 
                    <Grid item xs={12} display={"flex"} justifyContent={"space-between"}  margin={"30px 0"}>
 
-                  {data.map(item => (
+                   {data.map(item => (
                                        <Grid xs={3} sx={{"&:hover":{
                         border:"1px solid #CA9D7A",
                         borderRadius:"10px",
                     }, padding:"8px"}
                                        }>
                                        <Box textAlign={"start"} position={"relative"} padding={"0 0 0 12px"}>
-                                         <img src={item.image} alt="" style={{height:"100%", width:"90%", borderRadius:"0"}} />
+                                         <img src={item.image} alt="" style={{height:"100%", width:"90%", borderRadius:"0" }} />
                                          <Typography sx={{fontWeight:'600', margin:"14px 0",fontSize:"15px"}}>{item.proTitle}</Typography>
                                          <Typography sx={{color:'#CA9D7A', fontSize:"14px", marginBottom:"13px"}}><del style={{color:"gray"}}>{item.delprice}</del> {item.price}</Typography>
-                                         <Button sx={{backgroundColor:"#CA9D7A", color:"#FFF", fontSize:"12px", padding:"8px 12px","&:hover":{
+                                         <Button onClick={()=> navigate("/ring-card")} sx={{backgroundColor:"#CA9D7A", color:"#FFF", fontSize:"12px", padding:"8px 12px","&:hover":{
                                           backgroundColor:"#000",
                                           transition:".3s"
                                          }}}>{item.button}</Button>
                                        </Box>
                                       </Grid>
                   ))}
+                   
 
 
 
@@ -121,7 +124,7 @@ function Section4() {
                                          <img src={item.image} alt="" style={{height:"100%", width:"90%", borderRadius:"0" }} />
                                          <Typography sx={{fontWeight:'600', margin:"14px 0",fontSize:"15px"}}>{item.proTitle}</Typography>
                                          <Typography sx={{color:'#CA9D7A', fontSize:"14px", marginBottom:"13px"}}><del style={{color:"gray"}}>{item.delprice}</del> {item.price}</Typography>
-                                         <Button sx={{backgroundColor:"#CA9D7A", color:"#FFF", fontSize:"12px", padding:"8px 12px","&:hover":{
+                                         <Button onClick={()=> navigate("/ring-card")} sx={{backgroundColor:"#CA9D7A", color:"#FFF", fontSize:"12px", padding:"8px 12px","&:hover":{
                                           backgroundColor:"#000",
                                           transition:".3s"
                                          }}}>{item.button}</Button>

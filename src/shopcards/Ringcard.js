@@ -11,35 +11,46 @@ import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import EventIcon from '@mui/icons-material/Event';
 import HttpsIcon from '@mui/icons-material/Https';
+import StarBorderIcon from '@mui/icons-material/StarBorder';
+import goldring from "../assests/images/Home/goldenRing-1.jpg";
+import silverRing from "../assests/images/Home/productimg-2.jpg";
 
 
+
+
+function Ringcard() {
+    const productDetails = [
+        { image: silverRing, proTitle: "Stainless Steel Cutout Station Ankle Bracele", price: " $99.00", button: "Select options", delPrice: "$128.00" },
+        { image: goldring, proTitle: "Veronece 18K Clad 10″ Diamond Cut Anklet", price: "$12.00", button: "Select options", delPrice: "$15.00" },
+        { image: silverRing, proTitle: "14K Gold 9″ Diamond Ankle Bracelet", price: "$30.00", button: "Select options", delPrice: "$35.00" },
+        { image: silverRing, proTitle: "Stainless Steel Cutout Station Ankle Bracelet", price: "$12.00", button: "Select options", delPrice: "$15.00" },
+    ];
 
     const [color, setColor] = useState('');
     const [size, setSize] = useState('');
-   
-    function Ringcard() {
-      const ResultA = (props) => {
-        return (
-          <div>
-        Hi, This is component A
-      </div>
-    );
-  };
- 
-  const handleChange = (event) => {
-    setColor(event.target.value);
-};
+    const [activeButton, setActiveButton] = useState(null);
 
-const handleChangeSize = (event) => {
-    setSize(event.target.value);
-};
-  
-  
-
-
+    const toggleVisibility = (button) => {
+        setActiveButton(activeButton === button ? null : button);
+    };
     
 
-   
+
+    const handleChange = (event) => {
+        setColor(event.target.value);
+    };
+
+    const handleChangeSize = (event) => {
+        setSize(event.target.value);
+    };
+
+
+
+
+
+
+
+
     return (
         <div>
             <Box>
@@ -65,6 +76,7 @@ const handleChangeSize = (event) => {
                         </Box>
                     </Container>
                 </Box>
+
                 <Container>
                     <Box>
                         <Grid container spacing={2} padding={"10px"}>
@@ -181,7 +193,7 @@ const handleChangeSize = (event) => {
                                 </Box>
                             </Grid>
 
-                            <Grid item xs={2} sx={{  padding: "15px" }}>
+                            <Grid item xs={2} sx={{ padding: "15px" }}>
                                 <Box sx={{ borderRadius: "10px", padding: "8px" }}>
                                     <LocalShippingIcon sx={{ fontSize: "45px", color: "#CA9D7A" }} />
                                     <Typography sx={{ fontSize: "15px", fontWeight: "600", marginBottom: "6px" }}>International Shipment</Typography>
@@ -200,37 +212,147 @@ const handleChangeSize = (event) => {
                             </Grid>
                         </Grid>
                     </Box>
-
-                    <Box>
-            
-
-                    </Box>
                 </Container>
+
+
+
+                <Box>
+                    <Box borderBottom={"1px solid #ECF0F0"}>
+                        <Box sx={{ textAlign: "start", display: "flex", width: "25%", transform: "translateX(60%)", border: "solid 1px #ECF0F0", borderRadius: "10px 10px 0 0" }}>
+                            <button style={{ border: "1px solid #ECF0F0", backgroundColor: "#F7F7F7", padding: "14px" }} onClick={() => toggleVisibility('button1')}>
+                                {activeButton === 'button1'} Description
+                            </button>
+                            <button style={{ border: "1px solid #ECF0F0", backgroundColor: "#F7F7F7", padding: "14px 16px" }} onClick={() => toggleVisibility('button2')}>
+                                {activeButton === 'button2'} Additional information
+                            </button>
+                            <button style={{ border: "1px solid #ECF0F0", backgroundColor: "#F7F7F7", padding: "14px" }} onClick={() => toggleVisibility('button3')}>
+                                {activeButton === 'button3'} Reviews(0)
+                            </button>
+                        </Box>
+                    </Box>
+                    <Box sx={{ textAlign: "start", margin: "30px 60px" }}>
+                        {activeButton === 'button1' && <div>
+                            <Typography sx={{ fontSize: "24px", marginBottom: "10px" }}>Description</Typography>
+                            <Typography sx={{ color: "gray", fontSize: "15px" }}>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</Typography>
+                        </div>}
+                        {activeButton === 'button2' && <div>
+                            <Typography sx={{ fontSize: "24px", marginBottom: "10px" }}>Additional information</Typography>
+                            <Table container>
+                                <Table sx={{ border: "1px solid #BDBDBD" }}>
+                                    <TableHead>
+                                        <TableRow>
+                                            <TableCell sx={{ fontWeight: "600", color: "gray", border: "1px solid #BDBDBD", width: "10%" }}>color</TableCell>
+                                            <TableCell sx={{ color: "gray" }}><i>Bronz, Gold, White</i></TableCell>
+                                        </TableRow>
+                                        <TableRow>
+                                            <TableCell sx={{ fontWeight: "600", color: "gray", border: "1px solid #BDBDBD" }}>size</TableCell>
+                                            <TableCell sx={{ color: "gray" }}><i>16,17,18,19,20</i></TableCell>
+                                        </TableRow>
+                                    </TableHead>
+                                </Table>
+                            </Table>
+                        </div>}
+                        {activeButton === 'button3' && <div>
+
+                           <Typography sx={{ fontSize: "24px", marginBottom: "10px" }}>Reviews</Typography>
+                            <Typography sx={{ color: "gray", marginBottom: "18px" }}>There are no reviews yet.
+                                <br /> Be the first to review “Rhombus Diamond Ring 18k White Gold”
+                                <br />
+                                <br />Your email address will not be published. Required fields are marked *
+                            </Typography>
+                            <Typography sx={{ color: "#132A36", fontWeight: "700" }}>Your rating <sup>*</sup></Typography>
+                            <Box> 
+                                <StarBorderIcon sx={{
+                                    color: "gray", "&:hover": {
+                                        color: "#ffba00"
+                                    }
+                                }}></StarBorderIcon>
+                                <StarBorderIcon sx={{
+                                    color: "gray", "&:hover": {
+                                        color: "#ffba00"
+                                    }
+                                }}></StarBorderIcon>
+                                <StarBorderIcon sx={{
+                                    color: "gray", "&:hover": {
+                                        color: "#ffba00"
+                                    }
+                                }}></StarBorderIcon>
+                                <StarBorderIcon sx={{
+                                    color: "gray", "&:hover": {
+                                        color: "#ffba00"
+                                    }
+                                }}></StarBorderIcon>
+                                <StarBorderIcon sx={{
+                                    color: "gray", "&:hover": {
+                                        color: "#ffba00"
+                                    }
+                                }}></StarBorderIcon>
+                            </Box>
+
+                            <Typography sx={{ marginTop: "10px", color: "#132A36", fontWeight: "700" }}>Your review <sup>*</sup></Typography>
+                            <textarea type="text" style={{ width: "100%", padding: "10px 10px", backgroundColor: "#F7F7F7", border: "none", borderRadius: "10px" }} />
+                            <Typography sx={{ marginTop: "10px", color: "#132A36", fontWeight: "700" }}>Name <sup>*</sup></Typography>
+                            <input type="text" style={{ width: "100%", padding: "16px 10px", backgroundColor: "#F7F7F7", border: "none", borderRadius: "10px" }} />
+                            <Typography sx={{ marginTop: "10px", color: "#132A36", fontWeight: "700" }}>Email <sup>*</sup></Typography>
+                            <input type="email" style={{ width: "100%", padding: "16px 10px", backgroundColor: "#F7F7F7", border: "none", borderRadius: "10px" }} />
+                            <Box sx={{ display: "flex", marginTop: "10px" }}>
+                                <input type="checkBox" />
+                                <Typography sx={{ color: "#132A36", fontWeight: "700", marginRight: "6px" }}>Save my name, email, and website in this browser for the next time I comment.</Typography>
+                            </Box>
+                            <Button sx={{ backgroundColor: "#E9E6ED", color: "#515151", fontWeight: "600", marginTop: "10px" }}>Submit</Button>
+                        </div>}
+                    </Box>
+                </Box>
+
+
+
+
+                <Box>
+                    <Container>
+                        <Box sx={{ padding: "90px 20px" }}>
+                            <Grid container spacing={1} sx={{ margin: "10px" }}>
+                                {productDetails.map(item => (
+                                    <Grid item xs={3} key={item.id} sx={{
+                                        "&:hover": {
+                                            border: "1px solid #CA9D7A",
+                                            borderRadius: "10px",
+                                        }
+                                    }}>
+                                        <Box sx={{ textAlign: "start", padding: "10px", position: "relative" }}>
+                                            <Box>
+                                                <img src={item.image} alt={item.proTitle} style={{ height: "100%", width: "100%", borderRadius: "10px", marginBottom: "10px" }} />
+                                            </Box>
+                                            <Typography sx={{ fontWeight: "600", marginBottom: "10px" }}>{item.proTitle}</Typography>
+                                            <Typography sx={{ fontSize: "15px", color: "#CA9D7A", fontWeight: "500", marginBottom: "10px", }}>
+                                                <del style={{ color: "gray" }}>{item.delPrice}</del>
+                                                <u> {item.price}</u>
+                                            </Typography>
+                                            <Button sx={{
+                                                backgroundColor: "#CA9D7A", color: "#FFF", fontSize: "12px", padding: "10px 20px", fontWeight: "600", "&:hover": {
+                                                    background: "#000",
+                                                    transition: ".3s"
+                                                }
+                                            }}>{item.button}</Button>
+                                            <Box sx={{ height: "10%", width: "16%", backgroundColor: "#FFF", fontSize: "13px", fontWeight: "600", position: "absolute", top: "0", right: "0", borderRadius: "50%", display: "flex", justifyContent: "center", alignItems: "center" }}>Sale!</Box>
+                                        </Box>
+                                    </Grid>
+                                ))}
+
+                            </Grid>
+                        </Box>
+                    </Container>
+                </Box>
 
             </Box>
         </div>
     )
-  
+
 }
-  
-    
+
+
 
 export default Ringcard
 
 
 
 
-// <Table container>
-// <Table sx={{border:"1px solid #BDBDBD"}}>
-//   <TableHead>
-//     <TableRow>
-//       <TableCell sx={{fontWeight:"600", color:"gray", border:"1px solid #BDBDBD", width:"10%"}}>color</TableCell>
-//       <TableCell sx={{color:"gray"}}><i>Bronz, Gold, White</i></TableCell>
-//     </TableRow>
-//     <TableRow>
-//       <TableCell sx={{fontWeight:"600", color:"gray",border:"1px solid #BDBDBD"}}>size</TableCell>
-//       <TableCell sx={{color:"gray"}}><i>16,17,18,19,20</i></TableCell>
-//     </TableRow>
-//   </TableHead>
-// </Table>
-// </Table>
