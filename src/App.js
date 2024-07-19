@@ -7,7 +7,6 @@ import Ringcard from './shopcards/Ringcard';
 function App() {
   return (
     <div className="App">
-     {/* <Home/> */}
     <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/ring-card' element={<Ringcard/>}/>
