@@ -79,7 +79,7 @@ function Ringcard() {
 
                 <Container>
                     <Box>
-                        <Grid container spacing={2} padding={"10px"}>
+                        <Grid container spacing={2} padding={"20px 0 "}>
                             <Grid item xs={5}>
                                 <Box>
                                     <img src={proimg1} alt="" style={{ borderRadius: "10px", width: "100%", height: "100%" }} />
@@ -91,7 +91,7 @@ function Ringcard() {
                                 </Box>
                             </Grid>
                             <Grid item xs={5}>
-                                <Box padding={"20px"} textAlign={"start"}>
+                                <Box padding={"20px 30px"} textAlign={"start"}>
                                     <Box sx={{ borderBottom: "1px solid #F2F2F2" }}>
                                         <Box sx={{ fontSize: "24px", marginBottom: "8px" }}>Rhombus Diamond Ring 18k White Gold</Box>
                                         <Typography sx={{ color: "gray", fontSize: "13px", paddingBottom: "20px" }}>SKU : HOODIE-PATIENT-NINJA</Typography>
@@ -193,7 +193,7 @@ function Ringcard() {
                                 </Box>
                             </Grid>
 
-                            <Grid item xs={2} sx={{ padding: "15px" }}>
+                            <Grid item xs={2} sx={{ padding: "20px", marginTop:"30px" , border:"3px solid #F2F2F2", height:"50%", borderRadius:"10px"}}>
                                 <Box sx={{ borderRadius: "10px", padding: "8px" }}>
                                     <LocalShippingIcon sx={{ fontSize: "45px", color: "#CA9D7A" }} />
                                     <Typography sx={{ fontSize: "15px", fontWeight: "600", marginBottom: "6px" }}>International Shipment</Typography>

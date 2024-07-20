@@ -20,7 +20,7 @@ function Section6() {
     ];
   return (
     <div>
-      <Box sx={{marginTop:"-190px"}}>
+      <Box sx={{margin:"90px 0"}}>
         <Container>
             <Box>
                 <Typography sx={{textAlign:"start", fontSize:"30px", fontWeight:"700", position:"relative",

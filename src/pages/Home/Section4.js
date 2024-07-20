@@ -75,7 +75,7 @@ function Section4() {
                                        <Grid xs={3} sx={{"&:hover":{
                         border:"1px solid #CA9D7A",
                         borderRadius:"10px",
-                    }, padding:"8px"}
+                    }, padding:"12px 0px 10px 8px"}
                                        }>
                                        <Box textAlign={"start"} position={"relative"} padding={"0 0 0 12px"}>
                                          <img src={item.image} alt="" style={{height:"100%", width:"90%", borderRadius:"0" }} />
@@ -118,7 +118,7 @@ function Section4() {
                                        <Grid xs={3} sx={{"&:hover":{
                         border:"1px solid #CA9D7A",
                         borderRadius:"10px",
-                    }, padding:"8px"}
+                    }, padding:"12px 0px 10px 8px"}
                                        }>
                                        <Box textAlign={"start"} position={"relative"} padding={"0 0 0 12px"}>
                                          <img src={item.image} alt="" style={{height:"100%", width:"90%", borderRadius:"0" }} />

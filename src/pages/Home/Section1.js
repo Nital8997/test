@@ -8,11 +8,11 @@ import SpaIcon from '@mui/icons-material/Spa';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import slider1 from "../../assests/images/Home/slider-1.jpg";
+import slider1 from '../../assests/images/Home/model-11.png'
 import slider2 from "../../assests/images/Home/slider-2.jpg";
 import slider3 from "../../assests/images/Home/slider-3.jpg";
 import { Button } from '@mui/material';
-import bgImg  from '../../assests/images/Home/background-image.jpg'
+// import bgImg  from '../../assests/images/Home/background-image.jpg'
 
 
 
@@ -21,7 +21,7 @@ import bgImg  from '../../assests/images/Home/background-image.jpg'
 function Section1() {
     const OwlCarousel = () => {
         const Slider = {
-          dots: true,
+          dots: false,
           infinite: true,
           speed: 500,
           slidesToShow: 3,
@@ -57,46 +57,46 @@ function Section1() {
   
   return (
     <div>
-     <Box  sx={{position:"relative"}}>
-      {/* <Box><img src={bgImg} alt="" style={{width:"100%", height:"400px"}}/></Box> */}
+     <Box className='slider' sx={{backgroundImage:'url("https://jewellerycityweb.thimaqua.info/wp-content/uploads/2022/07/bg_white.jpg")', backgroundSize:"cover",backgroundPosition:"center"}}>
+     
       {/* <Box component="img" sx={{width:"100%", height:"70%"}} alt="" src="https://jewellerycityweb.thimaqua.info/wp-content/uploads/2022/07/bg_white.jpg"></Box> */}
         {/* <Container sx={{position:"absolute",top:"0",left:"110px"}}> */}
         <Container>
               <Typography className="elementor-Background" padding={"40px 0"}>
-            <Grid container spacing={2} sx={{height:"435px"}}>
-                <Grid item xs={3} sx={{background:"#FFF", border:"solid 1px #f7f9fc", padding:"25px", borderRadius:"10px"}}>
+            <Grid container spacing={5}>
+                <Grid item xs={12} lg={2.5} sx={{background:"#FFF", border:"solid 1px #f7f9fc", padding:"25px", borderRadius:"10px", height:"300%", marginTop:"20px", display:{lg:"block",md:"none", sm:"none",xs:"block"}}}>
 
-                    <Box sx={{textAlign:"start", padding:"10px 0"}}>
+                    <Box sx={{textAlign:"start", padding:"8px 0"}}>
                      <Typography sx={{ fontWeight:"700", fontSize:"16px"}}>All Department</Typography>   
                     </Box>  
 
                     <Box sx={{textAlign:"start"}}>
 
-                        <Box display={"flex"} padding={"8px 0 5px 0"} borderBottom={"1px solid #818EA0"}>
+                        <Box display={"flex"} padding={"8px 0 5px 0"} borderBottom={"1px solid #ecf0f0"}>
                             <SpaIcon sx={{color:"#CA9D7A"}}></SpaIcon> 
                             <Typography sx={{fontSize:"14px", fontWeight:"500", padding:"4px 0", margin:"0 0 0 4px"}}>Bracelates</Typography>
                         </Box>
-                        <Box display={"flex"} padding={"8px 0 5px 0"} borderBottom={"1px solid #818EA0"}>
+                        <Box display={"flex"} padding={"8px 0 5px 0"} borderBottom={"1px solid #ecf0f0"}>
                             <SpaIcon sx={{color:"#CA9D7A"}}></SpaIcon> 
                             <Typography sx={{fontSize:"14px", fontWeight:"500", padding:"4px 0", margin:"0 0 0 4px"}}>Earrings</Typography>
                         </Box>
-                        <Box display={"flex"} padding={"8px 0 5px 0"} borderBottom={"1px solid #818EA0"}>
+                        <Box display={"flex"} padding={"8px 0 5px 0"} borderBottom={"1px solid #ecf0f0"}>
                             <SpaIcon sx={{color:"#CA9D7A"}}></SpaIcon> 
                             <Typography sx={{fontSize:"14px", fontWeight:"500", padding:"4px 0", margin:"0 0 0 4px"}}>Onyx</Typography>
                         </Box>
-                        <Box display={"flex"} padding={"8px 0 5px 0"} borderBottom={"1px solid #818EA0"}>
+                        <Box display={"flex"} padding={"8px 0 5px 0"} borderBottom={"1px solid #ecf0f0"}>
                             <SpaIcon sx={{color:"#CA9D7A"}}></SpaIcon> 
                             <Typography sx={{fontSize:"14px", fontWeight:"500", padding:"4px 0", margin:"0 0 0 4px"}}>Pandants</Typography>
                             </Box>
-                        <Box display={"flex"} padding={"8px 0 5px 0"} borderBottom={"1px solid #818EA0"}>
+                        <Box display={"flex"} padding={"8px 0 5px 0"} borderBottom={"1px solid #ecf0f0"}>
                             <SpaIcon sx={{color:"#CA9D7A"}}></SpaIcon> 
                             <Typography sx={{fontSize:"14px", fontWeight:"500", padding:"4px 0", margin:"0 0 0 4px"}}>Pandants</Typography>
                         </Box>
-                        <Box display={"flex"} padding={"8px 0 5px 0"} borderBottom={"1px solid #818EA0"}>
+                        <Box display={"flex"} padding={"8px 0 5px 0"} borderBottom={"1px solid #ecf0f0"}>
                             <SpaIcon sx={{color:"#CA9D7A"}}></SpaIcon> 
                             <Typography sx={{fontSize:"14px", fontWeight:"500", padding:"4px 0", margin:"0 0 0 4px"}}>Tanzanites</Typography>
                             </Box>
-                        <Box display={"flex"} padding={"8px 0 5px 0"} borderBottom={"1px solid #818EA0"}>
+                        <Box display={"flex"} padding={"8px 0 5px 0"} borderBottom={"1px solid #ecf0f0"}>
                             <SpaIcon sx={{color:"#CA9D7A"}}></SpaIcon> 
                             <Typography sx={{fontSize:"14px", fontWeight:"500", padding:"4px 0", margin:"0 0 0 4px"}}>Tanzanites</Typography>
                         </Box>
@@ -107,7 +107,7 @@ function Section1() {
                     </Box>
                 </Grid>
 
-                <Grid item xs={9} >
+                <Grid item xs={12} lg={9.5} md={12} sm={12}>
                     <Box>
                     <Slider {...Slider}>
         <div>

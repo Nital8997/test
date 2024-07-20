@@ -23,9 +23,9 @@ function Section2() {
       <Container sx={{ padding: "0 0 0 0 !important" }}>
         <Box padding={"50px 0"} height={"450px"} >
 
-          <Grid container sx={{ justifyContent: "space-around", display: "flex", backgroundColor: "#FFF", padding: "30px 10px", borderRadius: "10px" }}>
-            <Grid sx={{ backgroundColor: "#FFF" }}>
-              <Box sx={{ width: "210px", padding: "15px", borderRadius: "10px" }}>
+          <Grid container sx={{ justifyContent: "space-around", display: "flex", backgroundColor: "#FFF", padding: "30px 10px", borderRadius: "10px"}}>
+            <Grid sx={{ backgroundColor: "#FFF", display:"flex", justifyContent:"center" }} lg={3} md={12}>
+              <Box sx={{  padding: "15px", borderRadius: "10px" }}>
                 <CloudCircleRoundedIcon sx={{ fontSize: "80px", color: "#CA9D7A" }} />
                 <Typography fontWeight={"700"} marginBottom={"8px"}>
                   Flash sale
@@ -34,15 +34,15 @@ function Section2() {
                   Consectetuer tempor commodo nascetur amet nisi turpis eros adipiscing molestie
                 </Typography>
                 <Box sx={{ display: "flex", justifyContent: "space-between", gap: "6px" }}>
-                  <Box sx={{ backgroundColor: "#F7F7F7", borderRadius: "10px", padding: "8px", width: "73px" }}>
+                  <Box sx={{ backgroundColor: "#F7F7F7", borderRadius: "10px", padding: "8px", width: "100%" }}>
                     <Typography className='elementor-countdown-digits elementor-countdown-hours' color={"#CA9D7A"} fontWeight={"600"} fontSize={"24px"}>00</Typography>
                     <Typography className='elementor-countdown-lable' fontSize={"13px"} fontWeight={"500"}>Hours</Typography>
                   </Box>
-                  <Box sx={{ backgroundColor: "#F7F7F7", borderRadius: "10px", padding: "8px", width: "73px" }}>
+                  <Box sx={{ backgroundColor: "#F7F7F7", borderRadius: "10px", padding: "8px", width: "100%" }}>
                     <Typography className='elementor-countdown-digits elementor-countdown-minutes' color={"#CA9D7A"} fontWeight={"600"} fontSize={"24px"}>00</Typography>
                     <Typography className='elementor-countdown-lable' fontSize={"13px"} fontWeight={"500"}>Minutes</Typography>
                   </Box>
-                  <Box sx={{ backgroundColor: "#F7F7F7", borderRadius: "10px", padding: "8px", width: "73px" }}>
+                  <Box sx={{ backgroundColor: "#F7F7F7", borderRadius: "10px", padding: "8px", width: "100%" }}>
                     <Typography className='elementor-countdown-digits elementor-countdown-seconds' color={"#CA9D7A"} fontWeight={"600"} fontSize={"24px"}>00</Typography>
                     <Typography className='elementor-countdown-lable' fontSize={"13px"} fontWeight={"500"}>Seconds</Typography>
                   </Box>
@@ -52,15 +52,15 @@ function Section2() {
 
 
             {data.map(item => (
-              <Grid xs={2} sx={{
+              <Grid lg={2} md={6} sm={6} xs={12} sx={{
                 "&:hover": {
                   border: "1px solid #CA9D7A",
                   borderRadius: "10px",
-                }, padding: "8px"
+                }, padding: "10px "
               }
               }>
-                <Box textAlign={"start"} position={"relative"} >
-                  <img src={item.image} alt="" style={{ height: "100%", width: "100%", borderRadius: "0" }} />
+                <Box textAlign={"start"} >
+                  <img src={item.image} alt="" style={{  width: "100%", borderRadius:"10px" }} />
                   <Typography sx={{ fontWeight: '600', margin: "14px 0", fontSize: "15px" }}>{item.proTitle}</Typography>
                   <Typography sx={{ color: '#CA9D7A', fontSize: "14px", marginBottom: "13px" }}><del style={{ color: "gray" }}>{item.delprice}</del> {item.price}</Typography>
                   <Button onClick={() => navigate("/ring-card")} sx={{
