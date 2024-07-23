@@ -1,19 +1,31 @@
 
 import './App.css';
-import Home from './components/Home';
+import Blogpage from './Components/Blogpage';
+import Contact from './Components/Contact';
+import About from './Components/About';
+import Pagess from './Components/Pagess';
 import { Route, Routes } from 'react-router-dom';
-import Ringcard from './shopcards/Ringcard';
-import Shop_product from './pages/shop/Shop_product';
+
+
+
 
 function App() {
   return (
-    <div className="App">
-    <Routes>
-      <Route path='/' element={<Home/>}/>
-      <Route path='/ring-card' element={<Ringcard/>}/>
-      <Route path='/shop' element={<Shop_product/>}/>
-    </Routes>
+    <div >
+   <>
+   <Routes>
+    <Route path="/" element ={<About/>}></Route>
+    <Route path="contact" element ={<Contact/>}></Route>
+    <Route path="Blog" element ={<Blogpage/>}></Route>
+    <Route path="pagess" element ={<Pagess/>}></Route>
+   </Routes>
+   </>
     </div>
+    //  <About/>
+    //  <Pagess/>
+    //  <Contact/>
+    //  <Blogpage/>
+    
   );
 }
 
