@@ -24,6 +24,8 @@ import image from "../../assets/images/Home/earring-image1.jpg";
 import earring from "../../assets/images/Home/earringgold-1.jpg";
 import proimage3 from "../../assets/images/Home/productimg-5.jpg";
 import { useNavigate } from "react-router-dom";
+import Header from '../../Components/Header';
+import Footer from '../../Components/Footer';
 
 function Shop_product() {
   const productCard = [
@@ -142,6 +144,7 @@ function Shop_product() {
 
   return (
     <div>
+      <Header/>
       <Box>
         <Container>
           <Box sx={{ padding: "50px 0" }}>
@@ -540,6 +543,7 @@ function Shop_product() {
           </Box>
         </Container>
       </Box>
+      <Footer/>
     </div>
   );
 }

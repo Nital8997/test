@@ -1,10 +1,13 @@
 import React from 'react'
 import { Container, Box, Typography, Grid, Button } from '@mui/material'
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import Header from '../../../Components/Header';
+import Footer from '../../../Components/Footer';
 
 function Carts() {
     return (
         <div>
+            <Header/>
             <Box>
                 <Container>
 
@@ -36,6 +39,7 @@ function Carts() {
                     </Box>
                 </Container>
             </Box>
+            <Footer/>
         </div>
     )
 }

@@ -10,10 +10,10 @@ function Section5() {
             <Box>
                 {/* <img src={image} alt="" style={{width:"100%"}}/> */}
               
-              <Grid sx={{width:"50%", textAlign:"start", padding:"10px", backgroundImage:`url(${image})`, backgroundSize:"cover",backgroundPosition:"center", width:"100%", height:"500px", display:"flex", justifyContent:"center", alignItems:"center"}}>
+              <Grid sx={{width:"50%", textAlign:"start", padding:"10px", backgroundImage:`url(${image})`, backgroundSize:"cover",backgroundPosition:"center", width:"100%", height:"500px", display:"flex", justifyContent:"center", alignItems:"center" ,height:{lg:"500px",md:"500px",sm:"320px",xs:"320px"}}}>
                     <Container>
-                      <Box sx={{width:"50%",width:{sm:"100%" , lg:"50%", md:"50%"}}}>
-                      <Typography sx={{fontSize:"45px", fontWeight:"700", lineHeight:"60px", marginBottom:"10px", letterSpacing:"0 !important"}}>
+                      <Box sx={{width:"50%",width:{sm:"100%" , md:"50%"}}}>
+                      <Typography sx={{ fontWeight:"700", lineHeight:"60px", marginBottom:"10px", letterSpacing:"0 !important", fontSize:{lg:"45px", md:"45px", sm:"32px",xs:"30px"},lineHeight:{lg:"60px", md:"60px", sm:"none", xs:"none"}}}>
                     For the best experience shopping on your mobile phone.
                     </Typography>
                     <Typography sx={{color:"gray"}}>

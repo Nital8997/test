@@ -8,6 +8,7 @@ import Section5 from '../pages/Home/Section5';
 import Section6 from '../pages/Home/Section6';
 import Section7 from '../pages/Home/Section7';
 import Section8 from '../pages/Home/Section8';
+import Footer from '../Components/Footer';
 
 
 
@@ -23,7 +24,7 @@ function Home() {
       <Section6/>
       <Section7/>
       <Section8/>
-      {/* <Footer/> */}
+      <Footer/>
     </div>
   )
 }

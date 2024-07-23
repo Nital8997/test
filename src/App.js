@@ -7,8 +7,9 @@ import { Route, Routes } from "react-router-dom";
 import Shop_product from '../src/pages/shop/Shop_product'
 import Ringcard from '../src/pages/shop/shopcards/Ringcard'
 import Home from '../src/Components/Home'
-import Teamwork from "./pages/Teamwork";
-import Carts from "./pages/Carts";
+import Carts from "./pages/Pages/carts/Carts";
+import Teamwork from "./pages/Pages/team/Teamwork";
+
 
 function App() {
   return (

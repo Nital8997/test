@@ -5,7 +5,7 @@ import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 export default function Services() {
   return (
     <Container>
-      <Grid container item xs={12} spacing={2}>
+      <Grid container item xs={12} spacing={2} sx={{marginTop:"30px"}}>
         <Grid item xl={12} lg={6} md={6} sm={12}>
           <Box>
             <img
