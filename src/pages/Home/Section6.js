@@ -1,4 +1,4 @@
-import { Box, Button, Container, Grid, Typography } from '@mui/material'
+import { Box, Button, Container, Divider, Grid, Typography } from '@mui/material'
 import React from 'react';
 import proimage from '../../assests/images/Home/productimg-3.jpg';
 import proimage2 from '../../assests/images/Home/productimg-4.jpg';
@@ -23,24 +23,26 @@ function Section6() {
       <Box sx={{margin:"90px 0"}}>
         <Container>
             <Box>
-                <Typography sx={{textAlign:"start", fontSize:"30px", fontWeight:"700", position:"relative",
-                '&::after':{
-                    content:'""',
-                    position:"absolute",
-                    top:"43%",
-                    left:"22%",
-                    width:"84%",
-                    border:"1px solid #ecf0f0",
-                
-                }}}>Product On Sale!</Typography>
+                <Typography sx={{textAlign:"start", fontSize:"30px", fontWeight:"700"
+                }}>
+                                  <Divider sx={{ borderColor: "grey.500" }}>
+                    <Typography
+                      variant="h4"
+                      component="span"
+                      sx={{ color: "#000", px: 2, fontWeight: "600" }}
+                    >
+                Product On Sale!    
+                    </Typography>
+                  </Divider>
+                </Typography>
 
             <Grid container spacing={1} sx={{margin:"10px"}}>
                 {productDetails.map(item => (
-                    <Grid item xs={3} key={item.id} sx={{"&:hover":{
+                    <Grid item lg={3} md={3} sm={6} xs={6} key={item.id} sx={{"&:hover":{
                         border:"1px solid #CA9D7A",
                         borderRadius:"10px",
                     }}}>
-                        <Box sx={{textAlign:"start", padding:"10px", position:"relative"}}>
+                        <Box sx={{textAlign:"start", padding:"10px"}}>
                             <Box>
                                 <img src={item.image} alt={item.proTitle} style={{height:"100%", width:"100%", borderRadius:"10px", marginBottom:"10px"}} />
                             </Box>
@@ -53,7 +55,7 @@ function Section6() {
                                 background:"#000",
                                 transition:".3s"
                             }}}>{item.button}</Button>
-                             <Box sx={{height:"10%", width:"16%", backgroundColor:"#FFF",fontSize:"13px", fontWeight:"600", position:"absolute", top:"0", right:"0", borderRadius:"50%",display:"flex", justifyContent:"center",alignItems:"center" }}>Sale!</Box>
+                             {/* <Box sx={{height:"10%", width:"16%", backgroundColor:"#FFF",fontSize:"13px", fontWeight:"600", position:"absolute", top:"0", right:"0", borderRadius:"50%",display:"flex", justifyContent:"center",alignItems:"center" }}>Sale!</Box> */}
                         </Box>
                     </Grid>
                 ))}
@@ -66,4 +68,4 @@ function Section6() {
   )
 }
 
-export default Section6
+export default Section6

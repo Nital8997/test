@@ -18,16 +18,17 @@ function Section3() {
             <Grid
               item
               xs={12}
-              md={6}
+              sm={5.5}
+              md={5.5}
               lg={5.5}
               sx={{
                 backgroundImage: `url(${img1})`,
-                // width: "100%",
-                height: "250px",
                 borderRadius: "10px",
+                marginTop:{xs:"10px"},
+                height:{lg:"250px", md:"250px", sm:"200px", xs:"250px"}
               }}
             >
-              <Box sx={{ textAlign: "start" }}>
+              <Box sx={{ textAlign: "start", padding:"30px"}}>
                 <Typography
                   sx={{
                     fontSize: { xs: "20px", md: "24px" },
@@ -41,7 +42,6 @@ function Section3() {
                   sx={{
                     marginBottom: "24px",
                     color: "#FFF",
-                    // fontSize: { xs: "12px", md: "14px" },
                   }}
                 >
                   Don't miss the last opportunity
@@ -60,20 +60,27 @@ function Section3() {
               </Box>
             </Grid>
 
+
+
             <Grid
               item
               xs={12}
-              md={6}
+              sm={5.5}
+              md={5.5}
               lg={5.5}
               sx={{
                 backgroundImage: `url(${img2})`,
+                backgroundPosition: "center",
+                backgroundSize:"cover",
                 width: "100%",
-                height: "250px",
                 borderRadius: "10px",
-                marginLeft:"20px"
+                marginLeft:"20px",
+                marginTop:{xs:"10px"  },
+                marginLeft:{lg:"10px", md:"10px", sm:"10px"},
+                height:{lg:"250px", md:"250px", sm:"200px", xs:"250px"}
               }}
             >
-              <Box sx={{ textAlign: "start" }}>
+              <Box sx={{ textAlign: "start", padding:"30px" }}>
                 <Typography
                   sx={{
                     fontSize: { xs: "20px", md: "24px" },
@@ -112,4 +119,4 @@ function Section3() {
   );
 }
 
-export default Section3;
+export default Section3;

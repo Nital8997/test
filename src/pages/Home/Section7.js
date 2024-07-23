@@ -1,8 +1,7 @@
-
 import { Box, Container, Grid, Typography } from '@mui/material'
 import React, { useState } from 'react'
 import { Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+// import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
@@ -82,12 +81,12 @@ function Section7() {
                             <Grid item xs={12}>
                                 <Box sx={{ width: "65%", margin: "0 auto" }}>
                                     <Typography sx={{ color: "#CA9D7A", fontWeight: "600" }}>FAQ</Typography>
-                                    <Box sx={{ fontSize: "46px", fontWeight: "600", marginBottom: "10px" }}>Frequently Ask Questions</Box>
-                                    <Box sx={{ color: "gray", fontSize: "15px", marginBottom:"40px" }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</Box>
+                                    <Box sx={{ fontWeight: "600", marginBottom: "10px", fontSize:{xs:"28px",lg:"46px",md:"46px"}}}>Frequently Ask Questions</Box>
+                                    <Box sx={{ color: "gray", marginBottom:"40px" , fontSize:{xs:"14px",lg:"15px"} }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</Box>
                                 </Box>
                             </Grid>
                             
-                            <Grid item xs={6} lg={6} sx={{ justifyContent: "center", alignItems: "center", display: "flex" }}>
+                            <Grid item md={6} lg={6} sm={12} xs={12} sx={{ justifyContent: "center", alignItems: "center", display: "flex" }}>
                                 <Box>
                                     <Typography sx={{ marginTop: "30px",border:"1px solid #E0E0E0"}}>
                                         {faqs.map((faq, index) => (
@@ -112,7 +111,7 @@ function Section7() {
                                 </Box>
                             </Grid>
 
-                            <Grid item xs={6} lg={6} sx={{ justifyContent: "center", alignItems: "center", display: "flex" }}>
+                            <Grid item md={6} lg={6} sm={12} xs={12} sx={{ justifyContent: "center", alignItems: "center", display: "flex" }}>
                                 <Box>
                                     <Typography sx={{ marginTop: "30px",border:"1px solid #E0E0E0"}}>
                                         {frequently.map((frequently, index) => (
@@ -147,4 +146,4 @@ function Section7() {
     )
 }
 
-export default Section7
+export default Section7

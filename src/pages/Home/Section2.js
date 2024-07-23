@@ -19,9 +19,9 @@ function Section2() {
   const navigate = useNavigate();
   return (
 
-    <Box sx={{ backgroundColor: "#F5F5F5", height: "auto" }}>
-      <Container sx={{ padding: "0 0 0 0 !important" }}>
-        <Box padding={"50px 0"} height={"450px"} >
+    <Box sx={{ backgroundColor: "#F5F5F5"}}>
+      <Container>
+        <Box padding={"50px 0"} >
 
           <Grid container sx={{ justifyContent: "space-around", display: "flex", backgroundColor: "#FFF", padding: "30px 10px", borderRadius: "10px"}}>
             <Grid sx={{ backgroundColor: "#FFF", display:"flex", justifyContent:"center" }} lg={3} md={12}>
@@ -87,4 +87,4 @@ function Section2() {
   )
 }
 
-export default Section2
+export default Section2

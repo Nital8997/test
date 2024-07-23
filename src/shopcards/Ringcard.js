@@ -56,23 +56,26 @@ function Ringcard() {
             <Box>
                 <Box sx={{ borderBottom: "1px solid #F2F2F2" }}>
                     <Container>
-                        <Box display={"flex"} padding={"16px 0 "}>
+                        <Box display={"flex"} padding={"16px 0 "} sx={{whiteSpace:{sm:"nowrap",xs:"nowrap"}}}>
                             <Typography sx={{
-                                fontSize: "13px", "&:hover": {
-                                    color: "#CA9D7A"
-                                }
+                                 "&:hover": {
+                                    color: "#CA9D7A",
+                                },
+                                fontSize:{lg:"13px",md:"13px",sm:"11px",xs:"11px"}
                             }}>Home /</Typography>
                             <Typography sx={{
-                                fontSize: "13px", "&:hover": {
-                                    color: "#CA9D7A"
-                                }
+                                 "&:hover": {
+                                    color: "#CA9D7A",
+                                },
+                                fontSize:{lg:"13px",md:"13px",sm:"11px",xs:"11px"}
                             }}>Earrings /</Typography>
                             <Typography sx={{
-                                fontSize: "13px", "&:hover": {
-                                    color: "#CA9D7A"
-                                }
+                                "&:hover": {
+                                    color: "#CA9D7A",
+                                },
+                                fontSize:{lg:"13px",md:"13px",sm:"11px",xs:"11px"}
                             }}> All Stones /</Typography>
-                            <Typography sx={{ fontSize: "13px" }}> Rhombus Diamond Ring 18k White Gold </Typography>
+                            <Typography sx={{ fontSize: "13px",fontSize:{lg:"13px",md:"13px",sm:"11px",xs:"11px"} }}> Rhombus Diamond Ring 18k White Gold </Typography>
                         </Box>
                     </Container>
                 </Box>
@@ -80,7 +83,7 @@ function Ringcard() {
                 <Container>
                     <Box>
                         <Grid container spacing={2} padding={"20px 0 "}>
-                            <Grid item xs={5}>
+                            <Grid item xs={12} lg={5} md={5} sm={12}>
                                 <Box>
                                     <img src={proimg1} alt="" style={{ borderRadius: "10px", width: "100%", height: "100%" }} />
                                 </Box>
@@ -90,7 +93,8 @@ function Ringcard() {
                                     <img src={proimg3} alt="" style={{ width: "28%", borderRadius: "10px" }} />
                                 </Box>
                             </Grid>
-                            <Grid item xs={5}>
+
+                            <Grid item lg={5} md={5} sm={12} xs={12} >
                                 <Box padding={"20px 30px"} textAlign={"start"}>
                                     <Box sx={{ borderBottom: "1px solid #F2F2F2" }}>
                                         <Box sx={{ fontSize: "24px", marginBottom: "8px" }}>Rhombus Diamond Ring 18k White Gold</Box>
@@ -193,19 +197,25 @@ function Ringcard() {
                                 </Box>
                             </Grid>
 
-                            <Grid item xs={2} sx={{ padding: "20px", marginTop:"30px" , border:"3px solid #F2F2F2", height:"50%", borderRadius:"10px"}}>
-                                <Box sx={{ borderRadius: "10px", padding: "8px" }}>
+                            <Grid item lg={2} md={12} sm={12} xs={12}  sx={{ padding: "20px", marginTop:"30px" , border:"3px solid #F2F2F2", height:"50%", borderRadius:"10px"}}>
+                                <Box sx={{ borderRadius: "10px", padding: "8px", display:{ lg:"block" , md:"flex" , sm:"block", xs:"block"}, width:{md:"95%"}}}>
+                                    <Box>
                                     <LocalShippingIcon sx={{ fontSize: "45px", color: "#CA9D7A" }} />
                                     <Typography sx={{ fontSize: "15px", fontWeight: "600", marginBottom: "6px" }}>International Shipment</Typography>
                                     <Typography sx={{ color: "gray", fontSize: "14px", marginBottom: "8px" }}>Your orders are shipped seamlessly between countries</Typography>
+                                    </Box>
 
+                                    <Box>
                                     <EventIcon sx={{ fontSize: "45px", color: "#CA9D7A" }} />
                                     <Typography sx={{ fontSize: "15px", fontWeight: "600", marginBottom: "6px" }}>30 Days Warranty</Typography>
                                     <Typography sx={{ color: "gray", fontSize: "14px", marginBottom: "8px" }}>You have the right to return your orders within 30 days.</Typography>
+                                    </Box>
 
+                                    <Box>
                                     <HttpsIcon sx={{ fontSize: "45px", color: "#CA9D7A" }} />
                                     <Typography sx={{ fontSize: "15px", fontWeight: "600", marginBottom: "6px" }}>Secure Payment</Typography>
                                     <Typography sx={{ color: "gray", fontSize: "14px", marginBottom: "8px" }}>You have the right to return your orders within 30 days.</Typography>
+                                    </Box>
 
 
                                 </Box>
@@ -213,8 +223,7 @@ function Ringcard() {
                         </Grid>
                     </Box>
                 </Container>
-
-
+                
 
                 <Box>
                     <Box borderBottom={"1px solid #ECF0F0"}>
@@ -230,6 +239,7 @@ function Ringcard() {
                             </button>
                         </Box>
                     </Box>
+
                     <Box sx={{ textAlign: "start", margin: "30px 60px" }}>
                         {activeButton === 'button1' && <div>
                             <Typography sx={{ fontSize: "24px", marginBottom: "10px" }}>Description</Typography>
@@ -312,13 +322,13 @@ function Ringcard() {
                         <Box sx={{ padding: "90px 20px" }}>
                             <Grid container spacing={1} sx={{ margin: "10px" }}>
                                 {productDetails.map(item => (
-                                    <Grid item xs={3} key={item.id} sx={{
+                                    <Grid item lg={3} md={3} sm={6} xs={6} key={item.id} sx={{
                                         "&:hover": {
                                             border: "1px solid #CA9D7A",
                                             borderRadius: "10px",
                                         }
                                     }}>
-                                        <Box sx={{ textAlign: "start", padding: "10px", position: "relative" }}>
+                                        <Box sx={{ textAlign: "start", padding: "10px"}}>
                                             <Box>
                                                 <img src={item.image} alt={item.proTitle} style={{ height: "100%", width: "100%", borderRadius: "10px", marginBottom: "10px" }} />
                                             </Box>
@@ -333,7 +343,7 @@ function Ringcard() {
                                                     transition: ".3s"
                                                 }
                                             }}>{item.button}</Button>
-                                            <Box sx={{ height: "10%", width: "16%", backgroundColor: "#FFF", fontSize: "13px", fontWeight: "600", position: "absolute", top: "0", right: "0", borderRadius: "50%", display: "flex", justifyContent: "center", alignItems: "center" }}>Sale!</Box>
+                                            {/* <Box sx={{ height: "10%", width: "16%", backgroundColor: "#FFF", fontSize: "13px", fontWeight: "600", position: "absolute", top: "0", right: "0", borderRadius: "50%", display: "flex", justifyContent: "center", alignItems: "center" }}>Sale!</Box> */}
                                         </Box>
                                     </Grid>
                                 ))}
