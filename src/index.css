@@ -7,6 +7,7 @@ body {
     font-family: "Allerta", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  cursor: pointer;
   /* color: #f7f9fc; */
 }
 
@@ -23,7 +24,9 @@ body {
  .cardPro{
   width: 80%;
  }
-
+ .css-4t3x6l-MuiPaper-root-MuiDrawer-paper {
+  height: auto !important;
+ }
 /* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

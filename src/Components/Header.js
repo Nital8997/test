@@ -1,5 +1,5 @@
-import React from "react";
-import { Box , Container ,Typography } from "@mui/material";
+import React, { useState } from "react";
+import { Box , Container ,Drawer,IconButton,List,ListItem,ListItemText,Typography } from "@mui/material";
 import img1 from "../assets/images/Home/logo-1.png";
 import { Input } from "@mui/joy";
 import SearchIcon from "@mui/icons-material/Search";
@@ -8,8 +8,15 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import CallIcon from "@mui/icons-material/Call";
 import MenuIcon from '@mui/icons-material/Menu';
+import { useNavigate } from "react-router-dom";
 
 function Header() {
+  const [open, setOpen] = useState(false);
+  const Navigate = useNavigate();
+
+  const handleDrawerToggle = () => {
+    setOpen(!open);
+  }
   return (
     <div>
       <Box>
@@ -128,7 +135,7 @@ function Header() {
 
         {/* ==============================================navbar================================ */}
 
-        <Box sx={{ background: "#CA9D7A", padding: "6px 0", color: "#FFF" }}>
+        <Box sx={{ background: "#CA9D7A", padding: "6px 0", color: "#FFF"}}>
           <Container>
             <Box>
               <nav>
@@ -139,27 +146,31 @@ function Header() {
                   padding={"14px 0"}
 
                   >
-                    <Box sx={{display:"flex", alignItems:"center", display:{md:"none",lg:"none",sm:"block", xs:"block"}}}><MenuIcon/></Box>
+                    <Box sx={{ display: "flex", alignItems: "center", display: { md: "none", lg: "none", sm: "block", xs: "block" } }}>
+                      <IconButton onClick={handleDrawerToggle}>
+                        <MenuIcon sx={{color:"#FFF"}}/>
+                      </IconButton>
+                    </Box>
                     
-                  <Box sx={{display:"flex", padding:"10px 8px", textAlign:"center",alignItems:"center", display:{lg:"flex", md:"flex",sm:"none",xs:"none"}}}>
-                    <Typography sx={{paddingRight:"22px",fontWeight:"600",fontSize:"15px"}}>Home</Typography>
-                    <Typography sx={{paddingRight:"22px",fontWeight:"600",fontSize:"15px"}}>About Us</Typography>
-                    <Typography sx={{paddingRight:"22px",fontWeight:"600",fontSize:"15px"}}>Shop</Typography>
+                  <Box sx={{display:"flex", padding:"10px 8px", textAlign:"center",alignItems:"center",display:{lg:"flex", md:"flex",sm:"none",xs:"none"}}}>
+                    <Typography sx={{paddingRight:"22px",fontWeight:"600",fontSize:"15px"}} onClick={() => Navigate("/")}>Home</Typography>
+                    <Typography sx={{paddingRight:"22px",fontWeight:"600",fontSize:"15px"}} onClick={() => Navigate("/about")}>About Us</Typography>
+                    <Typography sx={{paddingRight:"22px",fontWeight:"600",fontSize:"15px"}} onClick={() => Navigate("/shop")}>Shop</Typography>
 
                     <Typography sx={{paddingRight:"22px",fontWeight:"600",fontSize:"15px",alignItems:"center",display:"flex", position:"relative","&:hover":{
                         "& .subMenu":{
                             opacity:"1",
                             visibility:"visible"
                         }
-                    }}}>
+                    }}}  onClick={() => Navigate("/pagess")}>
                       Pages
                       <KeyboardArrowDownIcon
                         sx={{ fontSize: "20px"}}/>
                        <Box className='subMenu' sx={{position:"absolute", top:"100%", left:"0", color:"#95999D", zIndex:"1",backgroundColor:"#FFF", padding:"10px 48px 10px 18px", borderRadius:"10px", textAlign:"start",whiteSpace:"nowrap",visibility:"hidden",opacity:"0", marginTop:"6px" }}>
-                        <Typography sx={{fontSize:"15px", paddingBottom:"20px"}}>Team</Typography>
+                        <Typography sx={{fontSize:"15px", paddingBottom:"20px"}}  onClick={() => Navigate("/team")}>Team</Typography>
                         <Typography sx={{fontSize:"15px", paddingBottom:"20px"}}>404</Typography>
                         <Typography sx={{fontSize:"15px", paddingBottom:"20px"}}>My Account</Typography>
-                        <Typography sx={{fontSize:"15px", paddingBottom:"20px"}}>Cart</Typography>
+                        <Typography sx={{fontSize:"15px", paddingBottom:"20px"}} onClick={()=>Navigate("/cart")}>Cart</Typography>
                         <Typography sx={{fontSize:"15px", paddingBottom:"20px"}}>Checkout</Typography>
                         </Box>
                     </Typography >
@@ -169,21 +180,46 @@ function Header() {
                             opacity:"1",
                             visibility:"visible"
                         }
-                    }}}>
+                    }}}  onClick={() => Navigate("/blog")}>
                       Blog <KeyboardArrowDownIcon sx={{ fontSize: "20px" }} />
                       <Box className='subMenu' sx={{position:"absolute", top:"100%", left:"0", color:"#95999D", zIndex:"1",backgroundColor:"#FFF", padding:"10px 48px 10px 18px", borderRadius:"10px", textAlign:"start",whiteSpace:"nowrap",visibility:"hidden",opacity:"0", marginTop:"6px"}}>
                         <Typography sx={{fontSize:"15px"}}>Single Blog</Typography>
                       </Box>
                     </Typography>
 
-                    <Typography sx={{paddingRight:"22px",fontWeight:"600",fontSize:"15px"}}>Contact</Typography>
+                    <Typography sx={{paddingRight:"22px",fontWeight:"600",fontSize:"15px"}}  onClick={() => Navigate("/contact")}>Contact</Typography>
                   </Box>
 
                   <Box sx={{textAlign:"center", alignItems:"center", display:"flex", fontSize:"15px"}}><Typography sx={{display:"flex", alignItems:"center" , fontWeight:"600"}}>
                     <CallIcon sx={{ paddingRight: "10px"}} />
                     +1 (123) 456 78 90
-                  </Typography></Box>
+                  </Typography>
+                  </Box>
                 </Box>
+{/* ===================================sidebar============================== */}
+<Drawer anchor="left" open={open} onClose={handleDrawerToggle}>
+        <List sx={{width:"100vw", height:"70%"}}>
+          <ListItem button>
+            <ListItemText primary="Home"  onClick={() => Navigate("/")} />
+          </ListItem>
+          <ListItem button>
+            <ListItemText primary="About Us"  onClick={() => Navigate("/about")}/>
+          </ListItem>
+          <ListItem button>
+            <ListItemText primary="Shop"  onClick={() => Navigate("/shop")}/>
+          </ListItem>
+          <ListItem button>
+            <ListItemText primary="Pages"   onClick={() => Navigate("/pagess")}/>
+          </ListItem>
+          <ListItem button>
+            <ListItemText primary="Blog"  onClick={() => Navigate("/blog")}/>
+          </ListItem>
+          <ListItem button>
+            <ListItemText primary="Contact" onClick={() => Navigate("/contact")} />
+          </ListItem>
+        </List>
+      </Drawer>
+
               </nav>
 
             </Box>

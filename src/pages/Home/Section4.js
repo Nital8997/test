@@ -17,7 +17,7 @@ import proimg4 from "../../assets/images/Home/productimg-4.jpg";
 import image from "../../assets/images/Home/earring-image1.jpg";
 import earring from "../../assets/images/Home/earringgold-1.jpg";
 import proimage3 from "../../assets/images/Home/productimg-5.jpg";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Section4() {
   const navigate = useNavigate();
@@ -44,7 +44,7 @@ function Section4() {
     {
       image: proimg4,
       proTitle: "Veronece 18K Clad 10″ Diamond Cut Anklet",
-      price: "$`12.00",
+      price: "$12.00",
       delprice: "$15.00",
       button: "Add to Cart",
     },
@@ -80,281 +80,115 @@ function Section4() {
     <div>
       <Box sx={{ padding: "50px 0" }}>
         <Container>
-          <Box>
-            <Grid
+          <Box sx={{display:"flex"}}>
+         
+          <Box sx={{ borderRadius: "10px", padding: "8px", textAlign:"center", width:"20%"}}>
+                                    <Box>
+                                    <LocalShippingIcon sx={{ fontSize: "45px", color: "#CA9D7A" }} />
+                                    <Typography sx={{ fontSize: "15px", fontWeight: "600", marginBottom: "6px" }}>International Shipment</Typography>
+                                    <Typography sx={{ color: "gray", fontSize: "14px", marginBottom: "8px",fontSize:{md:"12px", sm:"12px"} }}>Your orders are shipped seamlessly between countries</Typography>
+                                    </Box>
+
+                                    <Box>
+                                    <EventIcon sx={{ fontSize: "45px", color: "#CA9D7A" }} />
+                                    <Typography sx={{ fontSize: "15px", fontWeight: "600", marginBottom: "6px" }}>30 Days Warranty</Typography>
+                                    <Typography sx={{ color: "gray", fontSize: "14px", marginBottom: "8px",fontSize:{md:"12px", sm:"12px"} }}>You have the right to return your orders within 30 days.</Typography>
+                                    </Box>
+
+                                    <Box>
+                                    <HttpsIcon sx={{ fontSize: "45px", color: "#CA9D7A" }} />
+                                    <Typography sx={{ fontSize: "15px", fontWeight: "600", marginBottom: "6px" }}>Secure Payment</Typography>
+                                    <Typography sx={{ color: "gray", fontSize: "14px", marginBottom: "8px",fontSize:{md:"12px", sm:"12px"} }}>You have the right to return your orders within 30 days.</Typography>
+                                    </Box>
+
+
+                        
+          </Box>
+              {/* =================================shop-product============================== */}
+              
+              <Grid
               container
               rowSpacing={1}
               columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-              display={"flex"}
             >
+           
               <Grid
                 item
-                xs={2}
-                sx={{
-                  border: "2px solid #f7f7f7",
-                  padding: "15px",
-                  borderRadius: "10px",
-                }}
+                lg={12}
+                md={6}
+                sm={6}
+                xs={12}
+                sx={{ display: "flex", justifyContent: "space-between", marginTop:"25px" }}
               >
-                <Box sx={{ padding: "8px" }}>
-                  <LocalShippingIcon
-                    sx={{ fontSize: "45px", color: "#CA9D7A" }}
-                  />
-                  <Typography
-                    sx={{
-                      fontSize: "15px",
-                      fontWeight: "600",
-                      marginBottom: "6px",
-                    }}
-                  >
-                    International Shipment
-                  </Typography>
-                  <Typography
-                    sx={{
-                      color: "gray",
-                      fontSize: "14px",
-                      marginBottom: "8px",
-                    }}
-                  >
-                    Your orders are shipped seamlessly between countries
-                  </Typography>
-
-                  <EventIcon sx={{ fontSize: "45px", color: "#CA9D7A" }} />
-                  <Typography
-                    sx={{
-                      fontSize: "15px",
-                      fontWeight: "600",
-                      marginBottom: "6px",
-                    }}
-                  >
-                    30 Days Warranty
-                  </Typography>
-                  <Typography
-                    sx={{
-                      color: "gray",
-                      fontSize: "14px",
-                      marginBottom: "8px",
-                    }}
-                  >
-                    You have the right to return your orders within 30 days.
-                  </Typography>
-
-                  <HttpsIcon sx={{ fontSize: "45px", color: "#CA9D7A" }} />
-                  <Typography
-                    sx={{
-                      fontSize: "15px",
-                      fontWeight: "600",
-                      marginBottom: "6px",
-                    }}
-                  >
-                    Secure Payment
-                  </Typography>
-                  <Typography
-                    sx={{
-                      color: "gray",
-                      fontSize: "14px",
-                      marginBottom: "8px",
-                    }}
-                  >
-                    You have the right to return your orders within 30 days.
-                  </Typography>
-                </Box>
-              </Grid>
-
-              <Grid item xs={10}>
-                <Box my={4}>
-                  <Divider sx={{ borderColor: "grey.500" }}>
-                    <Typography
-                      variant="h4"
-                      component="span"
-                      sx={{ color: "#000", px: 2, fontWeight: "600" }}
-                    >
-                      New Arrival
-                    </Typography>
-                  </Divider>
+                <Box sx={{padding:"10px"}} >
+                 <Box sx={{flexWrap:"wrap"}} >
+                 <img src={proimg1} alt="" style={{ width: "100%" }} />
+                 <Typography sx={{marginTop:"10px", fontWeight:"600"}}>
+                 Rhombus Diamond Ring 18k White Gold
+                 </Typography>
+                 <Typography sx={{color:"#CA9D7A", fontSize:"14px", margin:"10px 0 20px 0"}}>
+                  $999.00
+                 </Typography>
+                 <Button sx={{backgroundColor:"#CA9D7A", color:"#FFF", fontSize:"11px","&:hover":{
+                  backgroundColor:"#000"
+                 }, padding:"12px 12px"}}>
+                  Select options
+                 </Button>
+                 </Box>
                 </Box>
 
-                <Grid
-                  item
-                  xs={12}
-                  display={"flex"}
-                  justifyContent={"space-between"}
-                  margin={"30px 0"}
-                >
-                  {data.map((item) => (
-                    <Grid
-                      xs={6}
+                <Box sx={{padding:"10px"}}>
+                 <Box sx={{flexWrap:"wrap"}}  >
+                 <img src={proimg1} alt="" style={{ width: "100%" }} />
+                 <Typography sx={{marginTop:"10px", fontWeight:"600"}}>
+                 Rhombus Diamond Ring 18k White Gold
+                 </Typography>
+                 <Typography sx={{color:"#CA9D7A", fontSize:"14px", margin:"10px 0 20px 0"}}>
+                  $999.00
+                 </Typography>
+                 <Button sx={{backgroundColor:"#CA9D7A", color:"#FFF", fontSize:"11px","&:hover":{
+                  backgroundColor:"#000"
+                 }, padding:"12px 12px"}}>
+                  Select options
+                 </Button>
+                 </Box>
+                </Box>
 
-                      sx={{
-                        "&:hover": {
-                          border: "1px solid #CA9D7A",
-                          borderRadius: "10px",
-                        },
-                        padding: "12px 0px 10px 8px",
-                      }}
-                    >
-                      <Box
-                        textAlign={"start"}
-                        padding={"0 0 0 12px"}
-                      >
-                        <img
-                          src={item.image}
-                          alt=""
-                          style={{
-                            height: "100%",
-                            width: "90%",
-                            borderRadius: "0",
-                          }}
-                        />
-                        <Typography
-                          sx={{
-                            fontWeight: "600",
-                            margin: "14px 0",
-                            fontSize: "15px",
-                          }}
-                        >
-                          {item.proTitle}
-                        </Typography>
-                        <Typography
-                          sx={{
-                            color: "#CA9D7A",
-                            fontSize: "14px",
-                            marginBottom: "13px",
-                          }}
-                        >
-                          <del style={{ color: "gray" }}>{item.delprice}</del>{" "}
-                          {item.price}
-                        </Typography>
-                        <Button
-                          onClick={() => navigate("/ring-card")}
-                          sx={{
-                            backgroundColor: "#CA9D7A",
-                            color: "#FFF",
-                            fontSize: "12px",
-                            padding: "8px 12px",
-                            "&:hover": {
-                              backgroundColor: "#000",
-                              transition: ".3s",
-                            },
-                          }}
-                        >
-                          {item.button}
-                        </Button>
-                      </Box>
-                    </Grid>
-                  ))}
-                </Grid>
+               <Box sx={{padding:"10px"}}>
+                 <Box sx={{flexWrap:"wrap"}} >
+                 <img src={proimg1} alt="" style={{ width: "100%" }} />
+                 <Typography sx={{marginTop:"10px", fontWeight:"600"}}>
+                 Rhombus Diamond Ring 18k White Gold
+                 </Typography>
+                 <Typography sx={{color:"#CA9D7A", fontSize:"14px", margin:"10px 0 20px 0"}}>
+                  $999.00
+                 </Typography>
+                 <Button sx={{backgroundColor:"#CA9D7A", color:"#FFF", fontSize:"11px","&:hover":{
+                  backgroundColor:"#000"
+                 }, padding:"12px 12px"}}>
+                  Select options
+                 </Button>
+                 </Box>
+                </Box>
+                
+                <Box sx={{padding:"10px"}}>
+                 <Box sx={{flexWrap:"wrap"}} >
+                 <img src={proimg1} alt="" style={{ width: "100%" }} />
+                 <Typography sx={{marginTop:"10px", fontWeight:"600"}}>
+                 Rhombus Diamond Ring 18k White Gold
+                 </Typography>
+                 <Typography sx={{color:"#CA9D7A", fontSize:"14px", margin:"10px 0 20px 0"}}>
+                  $999.00
+                 </Typography>
+                 <Button sx={{backgroundColor:"#CA9D7A", color:"#FFF", fontSize:"11px","&:hover":{
+                  backgroundColor:"#000"
+                 }, padding:"12px 12px"}}>
+                  Select options
+                 </Button>
+                 </Box>
+                </Box>
+
               </Grid>
-
-              <Box display={"flex"}>
-                <Grid
-                  item
-                  xs={2.7}
-                  padding={"10px 0 0 0 !important"}
-                  sx={{
-                    backgroundImage: `url(${image})`,
-                    backgroundPosition: "center",
-                    backgroundSize: "cover",
-                    borderRadius: "10px",
-                    marginTop: "10px",
-                  }}
-                >
-                  <Box color={"#FFF"} padding={"20px"}>
-                    <Typography paddingBottom={"6px"}>Promo</Typography>
-                    <Typography
-                      sx={{
-                        fontSize: "18px",
-                        fontWeight: "600",
-                        paddingBottom: "12px",
-                      }}
-                    >
-                      Discount up to 30% for first purchase!
-                    </Typography>
-                    <Button
-                      sx={{
-                        backgroundColor: "#CA9D7A",
-                        color: "#FFF",
-                        fontSize: "12px",
-                        "&:hover": {
-                          backgroundColor: "#000",
-                        },
-                      }}
-                    >
-                      Learn More
-                    </Button>
-                  </Box>
-                </Grid>
-
-                <Grid
-                  item
-                  display={"flex"}
-                  justifyContent={"space-between"}
-                  margin={"9px 0px"}
-                  padding={"0 0 0 24px"}
-                >
-                  {data2.map((item) => (
-                    <Grid
-                      xs={3}
-                      sx={{
-                        "&:hover": {
-                          border: "1px solid #CA9D7A",
-                          borderRadius: "10px",
-                        },
-                        padding: "12px 0px 10px 8px",
-                      }}
-                    >
-                      <Box
-                        textAlign={"start"}
-                        padding={"0 0 0 12px"}
-                      >
-                        <img
-                          src={item.image}
-                          alt=""
-                          style={{
-                            height: "100%",
-                            width: "90%",
-                            borderRadius: "0",
-                          }}
-                        />
-                        <Typography
-                          sx={{
-                            fontWeight: "600",
-                            margin: "14px 0",
-                            fontSize: "15px",
-                          }}
-                        >
-                          {item.proTitle}
-                        </Typography>
-                        <Typography
-                          sx={{
-                            color: "#CA9D7A",
-                            fontSize: "14px",
-                            marginBottom: "13px",
-                          }}
-                        >
-                          <del style={{ color: "gray" }}>{item.delprice}</del>{" "}
-                          {item.price}
-                        </Typography>
-                        <Button
-                          onClick={() => navigate("/ring-card")}
-                          sx={{
-                            backgroundColor: "#CA9D7A",
-                            color: "#FFF",
-                            fontSize: "12px",
-                            padding: "8px 12px",
-                            "&:hover": {
-                              backgroundColor: "#000",
-                              transition: ".3s",
-                            },
-                          }}
-                        >
-                          {item.button}
-                        </Button>
-                      </Box>
-                    </Grid>
-                  ))}
-                </Grid>
-              </Box>
             </Grid>
           </Box>
         </Container>
@@ -363,4 +197,4 @@ function Section4() {
   );
 }
 
-export default Section4;
+export default Section4;

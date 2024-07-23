@@ -145,10 +145,14 @@ function Shop_product() {
       <Box>
         <Container>
           <Box sx={{ padding: "50px 0" }}>
+            {/* ===================================section-1================================ */}
             <Grid container spacing={3}>
               <Grid
                 item
-                xs={2.5}
+                lg={2.5}
+                md={3}
+                sm={3}
+                xs={12}
                 sx={{
                   background: "#FFF",
                   border: "solid 3px #f7f7f7",
@@ -166,7 +170,7 @@ function Shop_product() {
                   <Box
                     display={"flex"}
                     padding={"8px 0 5px 0"}
-                    borderBottom={"1px solid #818EA0"}
+                    borderBottom={"1px solid #ecf0f0"}
                   >
                     <SpaIcon sx={{ color: "#CA9D7A" }}></SpaIcon>
                     <Typography
@@ -183,7 +187,7 @@ function Shop_product() {
                   <Box
                     display={"flex"}
                     padding={"8px 0 5px 0"}
-                    borderBottom={"1px solid #818EA0"}
+                    borderBottom={"1px solid #ecf0f0"}
                   >
                     <SpaIcon sx={{ color: "#CA9D7A" }}></SpaIcon>
                     <Typography
@@ -200,7 +204,7 @@ function Shop_product() {
                   <Box
                     display={"flex"}
                     padding={"8px 0 5px 0"}
-                    borderBottom={"1px solid #818EA0"}
+                    borderBottom={"1px solid #ecf0f0"}
                   >
                     <SpaIcon sx={{ color: "#CA9D7A" }}></SpaIcon>
                     <Typography
@@ -217,7 +221,7 @@ function Shop_product() {
                   <Box
                     display={"flex"}
                     padding={"8px 0 5px 0"}
-                    borderBottom={"1px solid #818EA0"}
+                    borderBottom={"1px solid #ecf0f0"}
                   >
                     <SpaIcon sx={{ color: "#CA9D7A" }}></SpaIcon>
                     <Typography
@@ -234,7 +238,7 @@ function Shop_product() {
                   <Box
                     display={"flex"}
                     padding={"8px 0 5px 0"}
-                    borderBottom={"1px solid #818EA0"}
+                    borderBottom={"1px solid #ecf0f0"}
                   >
                     <SpaIcon sx={{ color: "#CA9D7A" }}></SpaIcon>
                     <Typography
@@ -251,7 +255,7 @@ function Shop_product() {
                   <Box
                     display={"flex"}
                     padding={"8px 0 5px 0"}
-                    borderBottom={"1px solid #818EA0"}
+                    borderBottom={"1px solid #ecf0f0"}
                   >
                     <SpaIcon sx={{ color: "#CA9D7A" }}></SpaIcon>
                     <Typography
@@ -268,7 +272,7 @@ function Shop_product() {
                   <Box
                     display={"flex"}
                     padding={"8px 0 5px 0"}
-                    borderBottom={"1px solid #818EA0"}
+                    borderBottom={"1px solid #ecf0f0"}
                   >
                     <SpaIcon sx={{ color: "#CA9D7A" }}></SpaIcon>
                     <Typography
@@ -298,13 +302,16 @@ function Shop_product() {
                 </Box>
               </Grid>
 
-              <Grid item xs={9}>
-                <Box sx={{ position: "relative" }}>
-                  <img
+{/* ==========================================section2================== */}
+              <Grid lg={9} md={9} sm={9} >
+                <Box sx={{ position: "relative"}}>
+               
+                 <img
                     src={imgring}
-                    alt=""
-                    style={{ width: "100%", borderRadius: "10px" }}
+                    style={{ borderRadius: "10px", marginLeft:"20px" }}
                   />
+
+                
                   <Box
                     sx={{
                       position: "absolute",
@@ -338,6 +345,9 @@ function Shop_product() {
                     </Button>
                   </Box>
                 </Box>
+
+{/* =======================formcontrol======================= */}
+
                 <Box sx={{ textAlign: "end" }}>
                   <FormControl
                     variant="standard"
@@ -377,14 +387,20 @@ function Shop_product() {
                 </Box>
               </Grid>
 
+
+{/* =================================shippingdetails====================== */}
               <Grid
                 item
-                xs={2.5}
+                lg={2.5}
+                sm={12}
+                md={3}
                 sx={{
                   border: "3px solid #f7f7f7",
                   padding: "15px",
                   marginTop: "30px",
-                  height:"50%"
+                  height:"50%",
+                  textAlign:"center",
+                  display:{md:"flex"}
                 }}
               >
                 <Box sx={{ borderRadius: "10px", padding: "8px" }}>
@@ -451,12 +467,13 @@ function Shop_product() {
                   </Typography>
                 </Box>
               </Grid>
+              {/* ===========================shop========================== */}
 
-              <Grid item xs={9} sx={{ width: "100%" }}>
+              <Grid item lg={9}  sx={{ width: "100%" }}>
                 <Box sx={{display:"flex",flexWrap:"wrap"}}>
                   {productCard.map((item) => (
                     <Grid
-                      xs={3}
+                      xs={12} sm={8} md={3} lg={3}
                       sx={{
                         "&:hover": {
                           border: "1px solid #CA9D7A",

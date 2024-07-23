@@ -28,7 +28,7 @@ function Ringcard() {
 
     const [color, setColor] = useState('');
     const [size, setSize] = useState('');
-    const [activeButton, setActiveButton] = useState(null);
+    const [activeButton, setActiveButton] = useState('button1');
 
     const toggleVisibility = (button) => {
         setActiveButton(activeButton === button ? null : button);
@@ -93,6 +93,7 @@ function Ringcard() {
                                     <img src={proimg3} alt="" style={{ width: "28%", borderRadius: "10px" }} />
                                 </Box>
                             </Grid>
+    {/* ==============================section-2=======================================                         */}
 
                             <Grid item lg={5} md={5} sm={12} xs={12} >
                                 <Box padding={"20px 30px"} textAlign={"start"}>
@@ -196,25 +197,25 @@ function Ringcard() {
                                     </Box>
                                 </Box>
                             </Grid>
-
-                            <Grid item lg={2} md={12} sm={12} xs={12}  sx={{ padding: "20px", marginTop:"30px" , border:"3px solid #F2F2F2", height:"50%", borderRadius:"10px"}}>
+{/* ====================================section-3======================================= */}
+                            <Grid item lg={2} md={12} sm={12} xs={12}  sx={{ padding: "20px", marginTop:"30px" , border:"3px solid #F2F2F2", height:"50%", borderRadius:"10px", textAlign:{md:"center", sm:"center"}}}>
                                 <Box sx={{ borderRadius: "10px", padding: "8px", display:{ lg:"block" , md:"flex" , sm:"block", xs:"block"}, width:{md:"95%"}}}>
                                     <Box>
                                     <LocalShippingIcon sx={{ fontSize: "45px", color: "#CA9D7A" }} />
                                     <Typography sx={{ fontSize: "15px", fontWeight: "600", marginBottom: "6px" }}>International Shipment</Typography>
-                                    <Typography sx={{ color: "gray", fontSize: "14px", marginBottom: "8px" }}>Your orders are shipped seamlessly between countries</Typography>
+                                    <Typography sx={{ color: "gray", fontSize: "14px", marginBottom: "8px",fontSize:{md:"12px", sm:"12px"} }}>Your orders are shipped seamlessly between countries</Typography>
                                     </Box>
 
                                     <Box>
                                     <EventIcon sx={{ fontSize: "45px", color: "#CA9D7A" }} />
                                     <Typography sx={{ fontSize: "15px", fontWeight: "600", marginBottom: "6px" }}>30 Days Warranty</Typography>
-                                    <Typography sx={{ color: "gray", fontSize: "14px", marginBottom: "8px" }}>You have the right to return your orders within 30 days.</Typography>
+                                    <Typography sx={{ color: "gray", fontSize: "14px", marginBottom: "8px",fontSize:{md:"12px", sm:"12px"} }}>You have the right to return your orders within 30 days.</Typography>
                                     </Box>
 
                                     <Box>
                                     <HttpsIcon sx={{ fontSize: "45px", color: "#CA9D7A" }} />
                                     <Typography sx={{ fontSize: "15px", fontWeight: "600", marginBottom: "6px" }}>Secure Payment</Typography>
-                                    <Typography sx={{ color: "gray", fontSize: "14px", marginBottom: "8px" }}>You have the right to return your orders within 30 days.</Typography>
+                                    <Typography sx={{ color: "gray", fontSize: "14px", marginBottom: "8px",fontSize:{md:"12px", sm:"12px"} }}>You have the right to return your orders within 30 days.</Typography>
                                     </Box>
 
 
@@ -223,6 +224,8 @@ function Ringcard() {
                         </Grid>
                     </Box>
                 </Container>
+
+                {/* ==========================================togglebutton=============================== */}
                 
 
                 <Box>
@@ -316,7 +319,7 @@ function Ringcard() {
 
 
 
-
+{/* ===============================================shop-product=========================== */}
                 <Box>
                     <Container>
                         <Box sx={{ padding: "90px 20px" }}>

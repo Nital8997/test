@@ -10,6 +10,7 @@ import Section7 from '../pages/Home/Section7';
 import Section8 from '../pages/Home/Section8';
 
 
+
 function Home() {
   return (
     <div>
@@ -17,11 +18,12 @@ function Home() {
       <Section1/>
       <Section2 />
       <Section3/>
-      <Section4/>
+      {/* <Section4/> */}
       <Section5/>
       <Section6/>
       <Section7/>
       <Section8/>
+      {/* <Footer/> */}
     </div>
   )
 }
