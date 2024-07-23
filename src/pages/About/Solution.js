@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Grid, Container, Typography, CardContent, Card } from '@mui/material'
-import bride_errings from '../assets/images/aboutpage/-bride-earrings-.jpg'
+import bride_errings from '../../assets/images/aboutpage/-bride-earrings-.jpg'
 import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
 import StoreIcon from '@mui/icons-material/Store';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';

@@ -1,11 +1,11 @@
 import { Container,Box,Typography ,Grid} from '@mui/material'
 import React from 'react'
-import b1 from '../assets/images/Blogimages/b1.jpg'
-import b2 from '../assets/images/Blogimages/B2.jpg'
-import b3 from '../assets/images/Blogimages/B3.jpg'
-import b4 from '../assets/images/Blogimages/B4.jpg'
-import b5 from '../assets/images/Blogimages/B5.jpg'
-import b6 from '../assets/images/Blogimages/B6.jpg'
+import b1 from '../../assets/images/Blogimages/b1.jpg'
+import b2 from '../../assets/images/Blogimages/B2.jpg'
+import b3 from '../../assets/images/Blogimages/B3.jpg'
+import b4 from '../../assets/images/Blogimages/B4.jpg'
+import b5 from '../../assets/images/Blogimages/B5.jpg'
+import b6 from '../../assets/images/Blogimages/B6.jpg'
 import { Navigate, useNavigate, } from 'react-router-dom'
 
 

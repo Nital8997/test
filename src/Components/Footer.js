@@ -181,7 +181,7 @@ function Footer() {
       <Box sx={{ paddingTop: "70px" }}>
         <Container>
           <Grid container spacing={3}>
-            <Grid item xl={12} sm={6} md={4} lg={3} xs={6}>
+            <Grid item xl={12} sm={6} md={4} lg={3} xs={12}>
               <Box textAlign={"start"}>
                 <img src={logo} alt="" s />
                 <Typography
@@ -298,7 +298,7 @@ function Footer() {
                 </Box>
               </Box>
             </Grid>
-            <Grid item xl={12} sm={6} md={4} lg={3} xs={6}>
+            <Grid item xl={12} sm={6} md={4} lg={3} xs={12}>
               <Box sx={{ textAlign: "start" }}>
                 <Typography sx={{ color: "#132a36", fontWeight: "600" }}>
                   Customer Service
@@ -330,7 +330,7 @@ function Footer() {
                 </Typography>
               </Box>
             </Grid>
-            <Grid item xl={12} sm={6} md={4} lg={3} xs={6}>
+            <Grid item xl={12} sm={6} md={4} lg={3} xs={12}>
               <Box sx={{ textAlign: "start" }}>
                 <Typography sx={{ color: "#132a36", fontWeight: "600" }}>
                   Get to Know Us
@@ -362,7 +362,7 @@ function Footer() {
                 </Typography>
               </Box>
             </Grid>
-            <Grid item xl={12} sm={6} md={4} lg={3} xs={6}>
+            <Grid item xl={12} sm={6} md={4} lg={3} xs={12}>
               <Box sx={{ textAlign: "start", whiteSpace: "nowrap" }}>
                 <Typography sx={{ color: "#132a36", fontWeight: "600" }}>
                   Partnerships
@@ -385,7 +385,7 @@ function Footer() {
               </Box>
             </Grid>
           </Grid>
-         <Grid>
+         {/* <Grid>
          <Box
             sx={{
               display: "flex",
@@ -394,7 +394,7 @@ function Footer() {
               paddingTop: "20px",
             }}
           >
-            <Grid item sm={12} md={6} lg={6}>
+            <Grid item sm={12} md={6} lg={6} xl={12}>
            
     
                 <Typography style={{ color: "gray", fontSize: "14px" }}>
@@ -403,7 +403,7 @@ function Footer() {
                 </Typography>
               </Grid>
           
-            <Grid item  sm={12} md={6} lg={6}>
+            <Grid item  sm={12} md={6} lg={6} xl={12}>
            
                 <Typography>
                   <img src={footerlogo} alt="" style={{ height: "25px" }} />
@@ -411,7 +411,52 @@ function Footer() {
              
             </Grid>
           </Box>
-         </Grid>
+         </Grid> */}
+
+{/* <Grid container>
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          paddingTop: '20px',
+          width: '100%',
+        }}
+      >
+        <Grid item xs={12} md={6} lg={6} sm={12}>
+          <Box>
+          <Typography sx={{ color: 'gray', fontSize: '14px' }}>
+            Copyright © 2022 JC, All rights reserved. Powered by Flexitheme.
+          </Typography>
+          </Box>
+        </Grid>
+        <Grid item xs={12} md={6} lg={6} sm={6} sx={{ textAlign: { xs: 'center' } }}>
+          <img src={footerlogo} alt="Footer Logo" style={{ height: '25px' }} />
+        </Grid>
+      </Box>
+    </Grid> */}
+
+    <Grid container rowSpacing={6}  sx={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'end',
+          paddingTop: '20px',
+          width: '100%',
+        }}>
+  <Grid item xl={6} md={6} lg={6} sm={12} xs={12} >
+  <Box>
+          <Typography sx={{ color: 'gray', fontSize: '14px' }}>
+            Copyright © 2022 JC, All rights reserved. Powered by Flexitheme.
+          </Typography>
+          </Box>
+  </Grid>
+  <Grid item xl={6} md={6} lg={6} sm={12} xs={12} >
+ <Box>
+ <img src={footerlogo} alt="Footer Logo" style={{ height: '25px' ,display:"flex"}} />  
+ </Box>
+  </Grid>
+  
+</Grid>
         </Container>
       </Box>
     </div>

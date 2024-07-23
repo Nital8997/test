@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Grid, Container, Typography } from '@mui/material'
-import woman from '../assets/images/aboutpage/woman-in-black.jpg'
-import signature from '../assets/images/aboutpage/sign.png'
+import woman from '../../assets/images/aboutpage/woman-in-black.jpg'
+import signature from '../../assets/images/aboutpage/sign.png'
 import { Height } from '@mui/icons-material'
 
 function Works() {

@@ -27,10 +27,7 @@ function App() {
         </Routes>
       </>
     </div>
-    //  <About/>
-    //  <Pagess/>
-    //  <Contact/>
-    //  <Blogpage/>
+  
   );
 }
 

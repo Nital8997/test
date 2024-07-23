@@ -1,7 +1,8 @@
 import React from 'react'
-import Teamwork from '../pages/Teamwork'
-import Works from '../pages/Works'
-import Footer from '../pages/Footer'
+
+import Teamwork from '../pages/Pages/team/Teamwork'
+import Works from '../pages/About/Works'
+import Footer from '../Components/Footer'
 
 function Pagess() {
   return (
@@ -9,7 +10,7 @@ function Pagess() {
   <Works/>
       <Teamwork/>
       <Footer/>
-     
+
 
     </div>
 

@@ -1,7 +1,7 @@
 
 import React from 'react'
-import Category from '../pages/Category'
-import Footer from '../pages/Footer'
+import Category from '../pages/blog/Category'
+import Footer from '../Components/Footer'
 
 function Blogpage() {
   return (
