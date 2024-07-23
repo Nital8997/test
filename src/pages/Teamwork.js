@@ -2,10 +2,10 @@ import React from "react";
 import { Container, Grid, Box, Typography } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import b1 from "../assets/pagesimg/businessman1.png";
-import b2 from "../assets/pagesimg/businessman2.png";
-import b3 from "../assets/pagesimg/businessman3.png";
-import b4 from "../assets/pagesimg/business3.png";
+import b1 from "../assets/images/pagesimg/businessman1.png";
+import b2 from "../assets/images/pagesimg/businessman2.png";
+import b3 from "../assets/images/pagesimg/businessman3.png";
+import b4 from "../assets/images/pagesimg/business3.png";
 
 function Teamwork() {
   return (
