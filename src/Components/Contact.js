@@ -1,7 +1,7 @@
 import React from 'react'
-import Leave from '../pages/Leave'
-import Map_location from '../pages/Map_locations'
-import Footer from '../pages/Footer'
+import Leave from '../pages/contact/Leave'
+import Map_location from '../pages/contact/Map_locations'
+import Footer from '../Components/Footer'
 function Contact() {
   return (
     <div>

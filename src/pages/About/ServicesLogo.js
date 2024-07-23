@@ -3,11 +3,11 @@ import { Container, Grid, Box ,Typography} from '@mui/material';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import logo1 from '../assets/images/aboutpage/logo1.svg';
-import logo2 from '../assets/images/aboutpage/logo2.svg';
-import logo3 from '../assets/images/aboutpage/logo3.svg';
-import logo4 from '../assets/images/aboutpage/logo4.svg';
-import logo5 from '../assets/images/aboutpage/logo5.svg';
+import logo1 from '../../assets/images/aboutpage/logo1.svg';
+import logo2 from '../../assets/images/aboutpage/logo2.svg';
+import logo3 from '../../assets/images/aboutpage/logo3.svg';
+import logo4 from '../../assets/images/aboutpage/logo4.svg';
+import logo5 from '../../assets/images/aboutpage/logo5.svg';
 
 
 

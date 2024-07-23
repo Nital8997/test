@@ -1,9 +1,9 @@
 import React from 'react'
-import Services from '../pages/Services'
-import ServicesLogo from '../pages/ServicesLogo'
-import Solution from '../pages/Solution'
-import Works from '../pages/Works'
-import Footer from '../pages/Footer'
+import Services from '../pages/About/Services'
+import ServicesLogo from '../pages/About/ServicesLogo'
+import Solution from '../pages/About/Solution'
+import Works from '../pages/About/Works'
+import Footer from '../Components/Footer'
 
 function About() {
   return (
